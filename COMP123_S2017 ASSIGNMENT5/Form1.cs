@@ -16,5 +16,10 @@ namespace COMP123_S2017_ASSIGNMENT5
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
