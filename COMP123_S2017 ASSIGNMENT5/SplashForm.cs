@@ -15,7 +15,7 @@ namespace COMP123_S2017_ASSIGNMENT5
  * Student ID: 300930741
  * Date: August 15th, 2017
  * Description: This is the SplashForm class.
- * Version 0.1:- Added Splashform tick event handler to stop the form and start the calculator
+ * Version 0.2:- Fixed the error Time tick event.
  */
     public partial class SplashForm : Form
     {
@@ -36,7 +36,10 @@ namespace COMP123_S2017_ASSIGNMENT5
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            BMICalculator bmiCalculator = new BMICalculator();
+            bmiCalculator.Show();
+            this.Hide();
+            SplashFormTimer.Enabled = false;
         }
 
         /// <summary>
@@ -47,10 +50,7 @@ namespace COMP123_S2017_ASSIGNMENT5
         /// <param name="e"></param>
         private void SplashFormPictureBox_Click(object sender, EventArgs e)
         {
-            BMICalculator bmiCalculator = new BMICalculator();
-            bmiCalculator.Show();
-            this.Hide();
-            SplashFormTimer.Enabled = false;
+           
         }
     }
 }

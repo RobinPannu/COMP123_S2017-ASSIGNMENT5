@@ -140,5 +140,16 @@ namespace COMP123_S2017_ASSIGNMENT5
             BMIResultTextBox.Text = "";
             BMITextBox.Text = "";
         }
+
+        /// <summary>
+        /// This is the Form Closing event.
+        /// It stops the form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BMICalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
