@@ -162,15 +162,15 @@
             this.ResultsTableLayoutPanel.ColumnCount = 2;
             this.ResultsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.16667F));
             this.ResultsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.83333F));
-            this.ResultsTableLayoutPanel.Controls.Add(this.BMIResultLabel, 0, 0);
             this.ResultsTableLayoutPanel.Controls.Add(this.BMIResultTextBox, 1, 0);
             this.ResultsTableLayoutPanel.Controls.Add(this.BMITextBox, 1, 1);
-            this.ResultsTableLayoutPanel.Location = new System.Drawing.Point(21, 321);
+            this.ResultsTableLayoutPanel.Controls.Add(this.BMIResultLabel, 0, 0);
+            this.ResultsTableLayoutPanel.Location = new System.Drawing.Point(12, 342);
             this.ResultsTableLayoutPanel.Name = "ResultsTableLayoutPanel";
             this.ResultsTableLayoutPanel.RowCount = 2;
-            this.ResultsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ResultsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ResultsTableLayoutPanel.Size = new System.Drawing.Size(264, 115);
+            this.ResultsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.25532F));
+            this.ResultsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.74468F));
+            this.ResultsTableLayoutPanel.Size = new System.Drawing.Size(273, 94);
             this.ResultsTableLayoutPanel.TabIndex = 4;
             // 
             // BMIResultLabel
@@ -178,7 +178,7 @@
             this.BMIResultLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BMIResultLabel.AutoSize = true;
             this.BMIResultLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.BMIResultLabel.Location = new System.Drawing.Point(3, 42);
+            this.BMIResultLabel.Location = new System.Drawing.Point(4, 31);
             this.BMIResultLabel.Name = "BMIResultLabel";
             this.ResultsTableLayoutPanel.SetRowSpan(this.BMIResultLabel, 2);
             this.BMIResultLabel.Size = new System.Drawing.Size(70, 31);
@@ -189,7 +189,8 @@
             // 
             this.BMIResultTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BMIResultTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.BMIResultTextBox.Location = new System.Drawing.Point(123, 9);
+            this.BMIResultTextBox.Enabled = false;
+            this.BMIResultTextBox.Location = new System.Drawing.Point(129, 6);
             this.BMIResultTextBox.Name = "BMIResultTextBox";
             this.BMIResultTextBox.Size = new System.Drawing.Size(94, 38);
             this.BMIResultTextBox.TabIndex = 1;
@@ -220,7 +221,8 @@
             // 
             this.BMITextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BMITextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.BMITextBox.Location = new System.Drawing.Point(91, 67);
+            this.BMITextBox.Enabled = false;
+            this.BMITextBox.Location = new System.Drawing.Point(97, 53);
             this.BMITextBox.Name = "BMITextBox";
             this.BMITextBox.Size = new System.Drawing.Size(158, 38);
             this.BMITextBox.TabIndex = 2;

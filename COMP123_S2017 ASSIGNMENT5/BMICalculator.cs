@@ -15,7 +15,7 @@ namespace COMP123_S2017_ASSIGNMENT5
 * Student ID: 300930741
 * Date: August 15th, 2017
 * Description: BMI calculator Project.
-* Version 0.5:- Fixed the bug of Metric Calculation - part2
+* Version 0.6:- Modified Calculate button click event
 */
     public partial class BMICalculator : Form
     {
@@ -56,20 +56,19 @@ namespace COMP123_S2017_ASSIGNMENT5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double Weight = Convert.ToDouble(WeightTextBox.Text);
-            double Height = Convert.ToDouble(HeightTextBox.Text);
-
             if (ImperialRadioButton.Checked)
             {
                
-                this.BMIResult = ( Weight* 703) / (Math.Pow(Height,2));
+                this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text))* 703) / (Math.Pow((Convert.ToDouble(HeightTextBox.Text)),2));
             }
 
             else if (MetricRadioButton.Checked)
             {
                
-                this.BMIResult = (Weight) / (Math.Pow(Height, 2));
+                this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text))) / (Math.Pow((Convert.ToDouble(HeightTextBox.Text)), 2));
             }
+
+            BMIResult =  Math.Round(BMIResult,2);
             BMIResultTextBox.Text = Convert.ToString(BMIResult);
 
             if (this.BMIResult < 18.5)
