@@ -15,7 +15,7 @@ namespace COMP123_S2017_ASSIGNMENT5
 * Student ID: 300930741
 * Date: August 15th, 2017
 * Description: BMI calculator Project.
-* Version 0.6:- Modified Calculate button click event
+* Version 0.7:- Addedd reset button
 */
     public partial class BMICalculator : Form
     {
@@ -67,6 +67,8 @@ namespace COMP123_S2017_ASSIGNMENT5
                
                 this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text))) / (Math.Pow((Convert.ToDouble(HeightTextBox.Text)), 2));
             }
+
+
 
             BMIResult =  Math.Round(BMIResult,2);
             BMIResultTextBox.Text = Convert.ToString(BMIResult);
@@ -126,6 +128,17 @@ namespace COMP123_S2017_ASSIGNMENT5
 
             HeightValueLabel.Text = "In";
             WeightValueLabel.Text = "lbs";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MetricRadioButton.Checked = true;
+            HeightTextBox.Text = "";
+            WeightTextBox.Text = "";
+            HeightValueLabel.Text = "m";
+            WeightValueLabel.Text = "kgs";
+            BMIResultTextBox.Text = "";
+            BMITextBox.Text = "";
         }
     }
 }
