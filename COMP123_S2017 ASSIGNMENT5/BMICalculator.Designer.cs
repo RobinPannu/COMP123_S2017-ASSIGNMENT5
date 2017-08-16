@@ -38,11 +38,11 @@
             this.MetricRadioButton = new System.Windows.Forms.RadioButton();
             this.ImperialRadioButton = new System.Windows.Forms.RadioButton();
             this.ResultsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.BMIResultLabel = new System.Windows.Forms.Label();
             this.BMIResultTextBox = new System.Windows.Forms.TextBox();
+            this.BMITextBox = new System.Windows.Forms.TextBox();
+            this.BMIResultLabel = new System.Windows.Forms.Label();
             this.BMICalculateButton = new System.Windows.Forms.Button();
             this.ResultLabel = new System.Windows.Forms.Label();
-            this.BMITextBox = new System.Windows.Forms.TextBox();
             this.ResetButton = new System.Windows.Forms.Button();
             this.HeightWeightTableLayoutPanel.SuspendLayout();
             this.ResultsTableLayoutPanel.SuspendLayout();
@@ -174,6 +174,26 @@
             this.ResultsTableLayoutPanel.Size = new System.Drawing.Size(273, 94);
             this.ResultsTableLayoutPanel.TabIndex = 4;
             // 
+            // BMIResultTextBox
+            // 
+            this.BMIResultTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BMIResultTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BMIResultTextBox.Enabled = false;
+            this.BMIResultTextBox.Location = new System.Drawing.Point(129, 6);
+            this.BMIResultTextBox.Name = "BMIResultTextBox";
+            this.BMIResultTextBox.Size = new System.Drawing.Size(94, 38);
+            this.BMIResultTextBox.TabIndex = 1;
+            // 
+            // BMITextBox
+            // 
+            this.BMITextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BMITextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BMITextBox.Enabled = false;
+            this.BMITextBox.Location = new System.Drawing.Point(97, 54);
+            this.BMITextBox.Name = "BMITextBox";
+            this.BMITextBox.Size = new System.Drawing.Size(158, 38);
+            this.BMITextBox.TabIndex = 2;
+            // 
             // BMIResultLabel
             // 
             this.BMIResultLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -185,16 +205,6 @@
             this.BMIResultLabel.Size = new System.Drawing.Size(70, 31);
             this.BMIResultLabel.TabIndex = 0;
             this.BMIResultLabel.Text = "BMI:";
-            // 
-            // BMIResultTextBox
-            // 
-            this.BMIResultTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BMIResultTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.BMIResultTextBox.Enabled = false;
-            this.BMIResultTextBox.Location = new System.Drawing.Point(129, 6);
-            this.BMIResultTextBox.Name = "BMIResultTextBox";
-            this.BMIResultTextBox.Size = new System.Drawing.Size(94, 38);
-            this.BMIResultTextBox.TabIndex = 1;
             // 
             // BMICalculateButton
             // 
@@ -217,16 +227,6 @@
             this.ResultLabel.Size = new System.Drawing.Size(92, 31);
             this.ResultLabel.TabIndex = 3;
             this.ResultLabel.Text = "Result";
-            // 
-            // BMITextBox
-            // 
-            this.BMITextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BMITextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.BMITextBox.Enabled = false;
-            this.BMITextBox.Location = new System.Drawing.Point(97, 53);
-            this.BMITextBox.Name = "BMITextBox";
-            this.BMITextBox.Size = new System.Drawing.Size(158, 38);
-            this.BMITextBox.TabIndex = 2;
             // 
             // ResetButton
             // 

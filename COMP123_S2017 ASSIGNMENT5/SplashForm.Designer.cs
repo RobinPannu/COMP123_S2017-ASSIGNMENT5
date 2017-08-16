@@ -58,9 +58,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::COMP123_S2017_ASSIGNMENT5.Properties.Resources._481814420__4_;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 186);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 180);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(296, 236);
+            this.pictureBox1.Size = new System.Drawing.Size(296, 246);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 

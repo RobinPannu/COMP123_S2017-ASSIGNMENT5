@@ -56,16 +56,23 @@ namespace COMP123_S2017_ASSIGNMENT5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ImperialRadioButton.Checked)
+            if (HeightTextBox.Text.Length > 0 && WeightTextBox.Text.Length > 0)
             {
-               
-                this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text))* 703) / (Math.Pow((Convert.ToDouble(HeightTextBox.Text)),2));
-            }
+                if (ImperialRadioButton.Checked)
+                {
 
-            else if (MetricRadioButton.Checked)
+                    this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text)) * 703) / (Math.Pow((Convert.ToDouble(HeightTextBox.Text)), 2));
+                }
+
+                else if (MetricRadioButton.Checked)
+                {
+
+                    this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text))) / (Math.Pow((Convert.ToDouble(HeightTextBox.Text)), 2));
+                }
+            }
+            else
             {
-               
-                this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text))) / (Math.Pow((Convert.ToDouble(HeightTextBox.Text)), 2));
+                BMIResultTextBox.Text = "";
             }
 
 
@@ -73,8 +80,8 @@ namespace COMP123_S2017_ASSIGNMENT5
             BMIResult =  Math.Round(BMIResult,2);
             BMIResultTextBox.Text = Convert.ToString(BMIResult);
 
-            if (this.BMIResult < 18.5)
-            {
+            if (this.BMIResult < 18.5 && this.BMIResult >0)
+            { 
                 BMIScale = 'U';
             }
             else if (this.BMIResult >= 18.5 && this.BMIResult <= 24.9)
