@@ -15,7 +15,7 @@ namespace COMP123_S2017_ASSIGNMENT5
 * Student ID: 300930741
 * Date: August 15th, 2017
 * Description: BMI calculator Project.
-* Version 0.4:- Fixed the bug of Metric Calculation
+* Version 0.5:- Fixed the bug of Metric Calculation - part2
 */
     public partial class BMICalculator : Form
     {
@@ -65,7 +65,7 @@ namespace COMP123_S2017_ASSIGNMENT5
                 this.BMIResult = ( Weight* 703) / (Math.Pow(Height,2));
             }
 
-            else if (MetricsRadioButton.Checked)
+            else if (MetricRadioButton.Checked)
             {
                
                 this.BMIResult = (Weight) / (Math.Pow(Height, 2));
