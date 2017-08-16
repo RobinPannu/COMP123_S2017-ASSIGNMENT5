@@ -11,7 +11,7 @@ namespace COMP123_S2017_ASSIGNMENT5
  * Student ID: 300930741
  * Date: August 15th, 2017
  * Description: BMI calculator Project's driver class.
- * Version 0.1:- BMI calculator start.
+ * Version 0.1:- Splashform start.
  */
     static class Program
     {
@@ -23,7 +23,7 @@ namespace COMP123_S2017_ASSIGNMENT5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculator());
+            Application.Run(new SplashForm());
         }
     }
 }
