@@ -15,7 +15,7 @@ namespace COMP123_S2017_ASSIGNMENT5
 * Student ID: 300930741
 * Date: August 15th, 2017
 * Description: BMI calculator Project.
-* Version 0.1:- Calculate Button click event added.
+* Version 0.2:- Printed BMI in result textbox.
 */
     public partial class BMICalculator : Form
     {
@@ -56,6 +56,7 @@ namespace COMP123_S2017_ASSIGNMENT5
                 WeightValueLabel.Text = "kgs";
                 this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text)) / (Math.Pow(Convert.ToDouble(HeightTextBox.Text), 2)));
             }
+            BMIResultTextBox.Text = Convert.ToString(BMIResult);
         }
     }
 }
