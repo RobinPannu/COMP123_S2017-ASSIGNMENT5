@@ -15,13 +15,14 @@ namespace COMP123_S2017_ASSIGNMENT5
 * Student ID: 300930741
 * Date: August 15th, 2017
 * Description: BMI calculator Project.
-* Version 0.2:- Printed BMI in result textbox.
+* Version 0.3:- Added BMI scale in result textbox.
 */
     public partial class BMICalculator : Form
     {
         //PRIVATE INSTANCE VARIABLES
 
         private double _bmiResult;
+        private char _bmiScale;
 
         //PUBLIC PROPERTIES
 
@@ -34,6 +35,18 @@ namespace COMP123_S2017_ASSIGNMENT5
             set
             {
                 this._bmiResult = value;
+            }
+        }
+
+        public char BMIScale
+        {
+            get
+            {
+                return this._bmiScale;
+            }
+            set
+            {
+                this._bmiScale = value;
             }
         }
         public BMICalculator()
@@ -57,6 +70,43 @@ namespace COMP123_S2017_ASSIGNMENT5
                 this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text)) / (Math.Pow(Convert.ToDouble(HeightTextBox.Text), 2)));
             }
             BMIResultTextBox.Text = Convert.ToString(BMIResult);
+
+            if (this.BMIResult < 18.5)
+            {
+                BMIScale = 'U';
+            }
+            else if (this.BMIResult >= 18.5 && this.BMIResult <= 24.9)
+            {
+                BMIScale = 'N';
+            }
+            else if (this.BMIResult >= 25 && this.BMIResult <= 29.9)
+            {
+                BMIScale = 'O';
+            }
+            else if (this.BMIResult >= 30)
+            {
+                BMIScale = 'B';
+            }
+
+            switch (BMIScale)
+            {
+                case 'U':
+                    BMITextBox.Text = "Underweight";
+                    break;
+
+                case 'N':
+                    BMITextBox.Text = "Normal";
+                    break;
+
+                case 'O':
+                    BMITextBox.Text = "Overweight";
+                    break;
+
+                case 'B':
+                    BMITextBox.Text = "Obese";
+                    break;
+
+            }
         }
     }
 }
