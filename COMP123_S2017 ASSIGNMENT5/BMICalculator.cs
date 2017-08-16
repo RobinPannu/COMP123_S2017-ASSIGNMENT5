@@ -15,7 +15,7 @@ namespace COMP123_S2017_ASSIGNMENT5
 * Student ID: 300930741
 * Date: August 15th, 2017
 * Description: BMI calculator Project.
-* Version 0.3:- Added BMI scale in result textbox.
+* Version 0.4:- Fixed the bug of Metric Calculation
 */
     public partial class BMICalculator : Form
     {
@@ -56,18 +56,19 @@ namespace COMP123_S2017_ASSIGNMENT5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(ImperialRadioButton.Checked)
+            double Weight = Convert.ToDouble(WeightTextBox.Text);
+            double Height = Convert.ToDouble(HeightTextBox.Text);
+
+            if (ImperialRadioButton.Checked)
             {
-                HeightValueLabel.Text = "In";
-                WeightValueLabel.Text = "lbs";
-                this.BMIResult = ( (Convert.ToDouble(WeightTextBox.Text))* 703) / (Math.Pow(Convert.ToDouble(HeightTextBox.Text),2));
+               
+                this.BMIResult = ( Weight* 703) / (Math.Pow(Height,2));
             }
 
-            else if (ImperialRadioButton.Checked)
+            else if (MetricsRadioButton.Checked)
             {
-                HeightValueLabel.Text = "m";
-                WeightValueLabel.Text = "kgs";
-                this.BMIResult = ((Convert.ToDouble(WeightTextBox.Text)) / (Math.Pow(Convert.ToDouble(HeightTextBox.Text), 2)));
+               
+                this.BMIResult = (Weight) / (Math.Pow(Height, 2));
             }
             BMIResultTextBox.Text = Convert.ToString(BMIResult);
 
@@ -107,6 +108,25 @@ namespace COMP123_S2017_ASSIGNMENT5
                     break;
 
             }
+        }
+
+        private void BMICalculator_Load(object sender, EventArgs e)
+        {
+            HeightValueLabel.Text = "m";
+            WeightValueLabel.Text = "kgs";
+        }
+
+        private void MetricRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            HeightValueLabel.Text = "m";
+            WeightValueLabel.Text = "kgs";
+        }
+
+        private void ImperialRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+            HeightValueLabel.Text = "In";
+            WeightValueLabel.Text = "lbs";
         }
     }
 }

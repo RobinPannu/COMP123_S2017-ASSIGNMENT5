@@ -121,8 +121,9 @@
             // 
             // WeightTextBox
             // 
+            this.WeightTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WeightTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.WeightTextBox.Location = new System.Drawing.Point(93, 82);
+            this.WeightTextBox.Location = new System.Drawing.Point(93, 100);
             this.WeightTextBox.Name = "WeightTextBox";
             this.WeightTextBox.Size = new System.Drawing.Size(84, 38);
             this.WeightTextBox.TabIndex = 5;
@@ -140,6 +141,7 @@
             this.MetricRadioButton.TabStop = true;
             this.MetricRadioButton.Text = "Metric";
             this.MetricRadioButton.UseVisualStyleBackColor = false;
+            this.MetricRadioButton.CheckedChanged += new System.EventHandler(this.MetricRadioButton_CheckedChanged);
             // 
             // ImperialRadioButton
             // 
@@ -153,6 +155,7 @@
             this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
             this.ImperialRadioButton.UseVisualStyleBackColor = false;
+            this.ImperialRadioButton.CheckedChanged += new System.EventHandler(this.ImperialRadioButton_CheckedChanged);
             // 
             // ResultsTableLayoutPanel
             // 
@@ -235,7 +238,9 @@
             this.Controls.Add(this.HeightWeightTableLayoutPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "BMICalculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI CALCULATOR";
+            this.Load += new System.EventHandler(this.BMICalculator_Load);
             this.HeightWeightTableLayoutPanel.ResumeLayout(false);
             this.HeightWeightTableLayoutPanel.PerformLayout();
             this.ResultsTableLayoutPanel.ResumeLayout(false);
